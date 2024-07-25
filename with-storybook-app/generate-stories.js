@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // Define your Zeplin API details
 const ZEPLIN_API_URL = process.env.ZEPLIN_API_URL;
-const ZEPLIN_API_TOKEN = process.env.ZEPLIN_API_TOKEN;
+const ZEPLIN_API_TOKEN = `Bearer ${process.env.ZEPLIN_API_TOKEN}`;
 
 // Function to fetch components from Zeplin
 const fetchComponents = () => {
