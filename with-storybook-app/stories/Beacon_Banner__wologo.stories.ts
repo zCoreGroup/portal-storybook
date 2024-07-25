@@ -21,7 +21,13 @@ const Beacon_Banner__wologoWithHooks = () => {
     }
   };
 
-  return <Beacon_Banner__wologo primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Beacon_Banner__wologo
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

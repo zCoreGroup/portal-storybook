@@ -21,7 +21,13 @@ const Maintenance_BannerWithHooks = () => {
     }
   };
 
-  return <Maintenance_Banner primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Maintenance_Banner
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

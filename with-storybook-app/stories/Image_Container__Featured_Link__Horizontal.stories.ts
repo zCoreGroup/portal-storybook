@@ -21,7 +21,13 @@ const Image_Container__Featured_Link__HorizontalWithHooks = () => {
     }
   };
 
-  return <Image_Container__Featured_Link__Horizontal primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Image_Container__Featured_Link__Horizontal
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

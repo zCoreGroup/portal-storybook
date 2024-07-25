@@ -21,7 +21,13 @@ const Menu__DefaultWithHooks = () => {
     }
   };
 
-  return <Menu__Default primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Menu__Default
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

@@ -21,7 +21,13 @@ const Beacon_Banner__Stacked_BannerWithHooks = () => {
     }
   };
 
-  return <Beacon_Banner__Stacked_Banner primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Beacon_Banner__Stacked_Banner
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

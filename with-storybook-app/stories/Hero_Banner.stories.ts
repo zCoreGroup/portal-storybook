@@ -21,7 +21,13 @@ const Hero_BannerWithHooks = () => {
     }
   };
 
-  return <Hero_Banner primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Hero_Banner
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

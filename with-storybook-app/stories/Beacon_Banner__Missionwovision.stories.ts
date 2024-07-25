@@ -21,7 +21,13 @@ const Beacon_Banner__MissionwovisionWithHooks = () => {
     }
   };
 
-  return <Beacon_Banner__Missionwovision primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Beacon_Banner__Missionwovision
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

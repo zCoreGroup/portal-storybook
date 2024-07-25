@@ -21,7 +21,13 @@ const Beacon_Banner__WideBannerWithHooks = () => {
     }
   };
 
-  return <Beacon_Banner__WideBanner primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Beacon_Banner__WideBanner
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

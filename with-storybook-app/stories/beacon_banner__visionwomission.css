@@ -1,0 +1,30 @@
+
+.storybook-beacon_banner__visionwomission {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-beacon_banner__visionwomission--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-beacon_banner__visionwomission--secondary {
+  color: #333;
+  background-color: #e2e2e2;
+}
+.storybook-beacon_banner__visionwomission--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-beacon_banner__visionwomission--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-beacon_banner__visionwomission--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}

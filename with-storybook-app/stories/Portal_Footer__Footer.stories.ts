@@ -21,7 +21,13 @@ const Portal_Footer__FooterWithHooks = () => {
     }
   };
 
-  return <Portal_Footer__Footer primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Portal_Footer__Footer
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

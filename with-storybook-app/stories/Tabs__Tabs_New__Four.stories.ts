@@ -21,7 +21,13 @@ const Tabs__Tabs_New__FourWithHooks = () => {
     }
   };
 
-  return <Tabs__Tabs_New__Four primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Tabs__Tabs_New__Four
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

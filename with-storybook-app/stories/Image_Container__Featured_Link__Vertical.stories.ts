@@ -21,7 +21,13 @@ const Image_Container__Featured_Link__VerticalWithHooks = () => {
     }
   };
 
-  return <Image_Container__Featured_Link__Vertical primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Image_Container__Featured_Link__Vertical
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

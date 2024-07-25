@@ -21,7 +21,13 @@ const Menu__stackedWithHooks = () => {
     }
   };
 
-  return <Menu__stacked primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Menu__stacked
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

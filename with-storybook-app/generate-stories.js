@@ -7,9 +7,6 @@ require('dotenv').config();
 const ZEPLIN_API_URL = process.env.ZEPLIN_API_URL;
 const ZEPLIN_API_TOKEN = `Bearer ${process.env.ZEPLIN_API_TOKEN}`;
 
-console.log("ZEPLIN_API_URL:", ZEPLIN_API_URL);
-console.log("ZEPLIN_API_TOKEN:", ZEPLIN_API_TOKEN);
-
 // Function to fetch components from Zeplin
 const fetchComponents = () => {
   return new Promise((resolve, reject) => {
@@ -24,11 +21,11 @@ const fetchComponents = () => {
         data += chunk;
       });
       res.on('end', () => {
-        console.log("Raw response data:", data);
         try {
           const jsonData = JSON.parse(data);
           resolve(jsonData);
         } catch (e) {
+          console.error("Raw response data:", data);
           reject(new Error('Failed to parse JSON response from Zeplin API.'));
         }
       });
@@ -71,7 +68,13 @@ const ${componentName}WithHooks = () => {
     }
   };
 
-  return <${componentName} primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <${componentName}
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {

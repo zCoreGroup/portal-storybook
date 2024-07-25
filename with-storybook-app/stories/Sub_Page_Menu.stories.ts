@@ -21,7 +21,13 @@ const Sub_Page_MenuWithHooks = () => {
     }
   };
 
-  return <Sub_Page_Menu primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <Sub_Page_Menu
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {
