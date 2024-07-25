@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "669aa99836c7f2ad93ce967a"
+  ],
+  "styleguides": [
+    "662a7cb7cdce0eb321be4f68"
+  ],
+  "plugins": [
+    "zeplin-cli-connect-storybook-plugin"
+  ]
+}
