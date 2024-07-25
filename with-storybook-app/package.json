@@ -14,17 +14,18 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@storybook/cli": "^6.3.0",
     "@storybook/addon-essentials": "^8.0.9",
     "@storybook/addon-interactions": "^8.0.9",
     "@storybook/addon-links": "^8.0.9",
     "@storybook/blocks": "^8.0.9",
+    "@storybook/cli": "^6.3.0",
     "@storybook/nextjs": "^8.0.9",
     "@storybook/react": "^8.0.9",
     "@storybook/test": "^8.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "chromatic": "^11.5.6",
     "typescript": "^5"
   },
   "engines": {
