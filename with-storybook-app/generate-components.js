@@ -25,6 +25,7 @@ const fetchComponents = () => {
           const jsonData = JSON.parse(data);
           resolve(jsonData);
         } catch (e) {
+          console.error("Raw response data:", data);
           reject(new Error('Failed to parse JSON response from Zeplin API.'));
         }
       });

@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import { withZeplin } from '@zeplin/storybook-addon';
+// import { withZeplin } from '@zeplin/storybook-addon';
 
 const preview: Preview = {
   parameters: {
@@ -10,7 +10,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [withZeplin],
+  decorators: [],
 };
 
 export default preview;
