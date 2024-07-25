@@ -1,2 +1,2 @@
 # portal-storybook
-Deployed at https://portal-storybook-nu.vercel.app/
+Deployed at https://portal-zeplin-storybook.vercel.app/
