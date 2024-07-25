@@ -1,10 +1,11 @@
- const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const https = require('https');
+require('dotenv').config();
 
 // Define your Zeplin API details
-const ZEPLIN_API_URL = 'https://api.zeplin.dev/v1/projects/669aa99836c7f2ad93ce967a/components?sort=section&include_latest_version=false&include_linked_styleguides=false&limit=30&offset=0';
-const ZEPLIN_API_TOKEN = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoicGVyc29uYWxfYWNjZXNzX3Rva2VuIiwiY2xpZW50X2lkIjoiNjZhMDRjYzJhNDE3MjhkNDA4ODMzNmY5Iiwic2NvcGUiOiJhZG1pbiIsImlhdCI6MTcyMTc4MTQ0MiwiZXhwIjoyMDM3MzUwNzAyLCJpc3MiOiJ6ZXBsaW46YXBpLnplcGxpbi5pbyIsInN1YiI6IjY2MTZjZGI1NTViMTNmOGRmMjRhODNhNSIsImp0aSI6IjI4NTRkNTVjLTFlN2EtNGI5NC1iOTY3LTllMTY1MmEyMWJiNyJ9.UinGWjRed_6Nyc2aThNmPjCpjV0V6a8HN_BZ52BMyQo';
+const ZEPLIN_API_URL = process.env.ZEPLIN_API_URL;
+const ZEPLIN_API_TOKEN = process.env.ZEPLIN_API_TOKEN;
 
 // Function to fetch components from Zeplin
 const fetchComponents = () => {
@@ -73,7 +74,7 @@ export const Primary: Story = {
 const generateStory = (componentName) => {
   const sanitizedComponentName = sanitizeComponentName(componentName);
   const storyContent = storyTemplate(sanitizedComponentName);
-  const outputDir = path.join(__dirname, 'src', 'stories');
+  const outputDir = path.join(__dirname, 'stories');
   const outputFile = path.join(outputDir, `${sanitizedComponentName}.stories.ts`);
 
   if (!fs.existsSync(outputDir)) {
