@@ -5,8 +5,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "next": "14.2.2",
@@ -26,7 +27,8 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "storybook": "^8.0.9",
-    "typescript": "^5"
+    "typescript": "^5",
+    "serve": "^14.0.1"  // Added to serve the static Storybook
   },
   "engines": {
     "node": ">=18"
