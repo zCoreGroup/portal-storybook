@@ -1,0 +1,31 @@
+{
+  "plugins": [],
+  "styleguides": [
+    "662a7cb7cdce0eb321be4f68"
+  ],
+  "components": [
+    {
+      "path": "with-storybook-app\\.zeplin\\components.json",
+      "zeplinIds": [
+        "667f2bdcb683f0a1d136a987"
+      ]
+    },
+    {
+      "path": ".zeplin\\components.json",
+      "zeplinIds": [
+        "662a86a57484b2381751d80f",
+        "667f2bee55c468f8aaba191d",
+        "667f2bedd45b615faca586c9",
+        "667f2c2b2cb9af3663c4dfb5",
+        "667f2c25ab4f6ae3aa0636c2",
+        "667f2beea7991d2701c0c73e"
+      ]
+    }
+  ],
+  "github": {
+    "repository": "michaelwnau/portal-storybook"
+  },
+  "projects": [
+    "669aa99836c7f2ad93ce967a"
+  ]
+}
