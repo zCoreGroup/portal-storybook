@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const path = require('path');
 const https = require('https');
 require('dotenv').config();
@@ -7,11 +6,6 @@ require('dotenv').config();
 // Define your Zeplin API details
 const ZEPLIN_API_URL = process.env.ZEPLIN_API_URL;
 const ZEPLIN_API_TOKEN = `Bearer ${process.env.ZEPLIN_API_TOKEN}`;
-
-if (!ZEPLIN_API_URL || !ZEPLIN_API_TOKEN) {
-  console.error("Missing Zeplin API URL or Token in the environment variables.");
-  process.exit(1);
-}
 
 // Function to fetch components from Zeplin
 const fetchComponents = () => {
@@ -28,8 +22,10 @@ const fetchComponents = () => {
       });
       res.on('end', () => {
         try {
-          resolve(JSON.parse(data));
+          const jsonData = JSON.parse(data);
+          resolve(jsonData);
         } catch (e) {
+          console.error("Raw response data:", data);
           reject(new Error('Failed to parse JSON response from Zeplin API.'));
         }
       });
@@ -72,7 +68,13 @@ const ${componentName}WithHooks = () => {
     }
   };
 
-  return <${componentName} primary={isPrimary} onClick={handleOnChange} label={value} />;
+  return (
+    <${componentName}
+      primary={isPrimary}
+      onClick={handleOnChange}
+      label={value}
+    />
+  );
 };
 
 export const Primary: Story = {
@@ -99,6 +101,9 @@ const generateStory = (componentName) => {
 const main = async () => {
   try {
     const components = await fetchComponents();
+    if (!Array.isArray(components)) {
+      throw new Error('Invalid response format from Zeplin API.');
+    }
     components.forEach(component => {
       generateStory(component.name);
     });
@@ -108,18 +113,3 @@ const main = async () => {
 };
 
 main();
-
-require('dotenv').config();
-
-console.log('ZEPLIN_PROJECT_ID:', process.env.ZEPLIN_PROJECT_ID);
-console.log('ZEPLIN_STYLEGUIDE_ID:', process.env.ZEPLIN_STYLEGUIDE_ID);
-
-const zeplinConfig = {
-  projects: [process.env.ZEPLIN_PROJECT_ID],
-  styleguides: [process.env.ZEPLIN_STYLEGUIDE_ID],
-  plugins: ["zeplin-cli-connect-storybook-plugin"]
-};
-
-fs.writeFileSync('zeplin.json', JSON.stringify(zeplinConfig, null, 2));
-console.log('zeplin.json has been created successfully.');
-

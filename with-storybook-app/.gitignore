@@ -38,5 +38,10 @@ next-env.d.ts
 
 # storybook
 *storybook.log
+
 /storybook-static
 .vercel
+
+/storybook-static
+.vercel
+

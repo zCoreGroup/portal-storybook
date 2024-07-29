@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-react-plugin"
+    },
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "http://localhost:6006/iframe.html",
+        "format": "new"
+      }
+    }
+  ],
+  "styleguides": [
+    "662a7cb7cdce0eb321be4f68"
+  ],
+  "components": [
+    {
+      "path": ".zeplin\\components.json",
+      "zeplinIds": [
+        "662a859392c6b8e6ceae052e",
+        "667f2bdcb683f0a1d136a987",
+        "667f2c10bf35c218061af2d6"
+      ]
+    }
+  ]
+}
